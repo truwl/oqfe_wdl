@@ -1,0 +1,31 @@
+workflow_name: Original Quality Functional Equivalent (OQFE) Pipeline
+workflow_description:
+parameter_meta:
+    sample:
+        description: The sample configuration file
+    cram_reference_fasta:
+        description: Optional reference
+        group: Optional
+        example: 1
+    forward_reads:
+        description: Forward reads Fastq *.fastq.gz or *.fq.gz or a CRAM file *.cram. According to the FE protocol, the header line for the RG should contain minimally the tags ID, PL, PU, SM, and LB. Only if all of these tags are present in the input CRAM can they be used for the output OQFE CRAM header, otherwise the app will return an error and exit.
+        example: gs://broad-public-datasets/NA12878/NA12878.cram
+    reverse_reads:
+        description: Reverse reads fastq (optional)
+        group: Optional
+parameter_group:
+    Required:
+        title: Required
+        description: Required
+    Optional:
+        title: Optional
+        description: Optional
+
+{
+  "cram_reference_fasta": "File? (optional)",
+  "optical_duplicate_pixel_distance": "Int",
+  "forward_reads": "File",
+  "sample": "String",
+  "reverse_reads": "File? (optional)",
+  "threads": "Int"
+}

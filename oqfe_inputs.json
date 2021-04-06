@@ -1,0 +1,9 @@
+{
+  "cram_reference_fasta": "File? (optional)",
+  "optical_duplicate_pixel_distance": "Int",
+  "forward_reads": "File",
+  "sample": "String",
+  "reverse_reads": "File? (optional)",
+  "threads": "Int"
+}
+
