@@ -27,5 +27,4 @@ parameter_group:
   "forward_reads": "File",
   "sample": "String",
   "reverse_reads": "File? (optional)",
-  "threads": "Int"
 }

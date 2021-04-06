@@ -9,6 +9,8 @@ task oqfe{
         Int threads
     }
 
+    threads = 4
+
     command {
         set -e -o pipefail
         /usr/bin/python3.6 \

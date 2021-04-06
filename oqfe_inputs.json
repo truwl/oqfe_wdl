@@ -3,7 +3,6 @@
   "optical_duplicate_pixel_distance": "Int",
   "forward_reads": "File",
   "sample": "String",
-  "reverse_reads": "File? (optional)",
-  "threads": "Int"
+  "reverse_reads": "File? (optional)"
 }
 
