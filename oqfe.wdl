@@ -31,4 +31,6 @@ task oqfe{
         docker: "dnanexus/oqfe:latest"
         cpu: threads
     }
+    
+    meta {allowNestedInputs: true}
 }
