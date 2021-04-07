@@ -1,6 +1,6 @@
 version 1.0
 
-workflow oqfewf{
+workflow oqfe{
     input {
         String sample
         File forward_reads
@@ -8,8 +8,6 @@ workflow oqfewf{
         File? cram_reference_fasta
         Int? optical_duplicate_pixel_distance
     }
-
-    Int threads = 4
 
     call oqfetask {
         input:
