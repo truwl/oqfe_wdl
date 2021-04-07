@@ -1,4 +1,4 @@
 {
-    "sample": "NA12878",
-    "forward_reads": "https://storage.googleapis.com/truwl-sra/SRR7781428/NA12878-wu-r1-K5_lib63-d.UM.cram"
+    "oqfe.sample": "NA12878",
+    "oqfe.forward_reads": "https://storage.googleapis.com/truwl-sra/SRR7781428/NA12878-wu-r1-K5_lib63-d.UM.cram"
 }

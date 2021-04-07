@@ -1,8 +1,8 @@
 {
-  "cram_reference_fasta": "File? (optional)",
-  "optical_duplicate_pixel_distance": "Int",
-  "forward_reads": "File",
-  "sample": "String",
-  "reverse_reads": "File? (optional)"
+  "oqfe.cram_reference_fasta": "File? (optional)",
+  "oqfe.optical_duplicate_pixel_distance": "Int",
+  "oqfe.forward_reads": "File",
+  "oqfe.sample": "String",
+  "oqfe.reverse_reads": "File? (optional)"
 }
 
