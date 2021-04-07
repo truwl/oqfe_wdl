@@ -9,7 +9,7 @@ task oqfe{
         Int threads
     }
 
-    threads = 4
+    Int threads = 4
 
     command {
         set -e -o pipefail
