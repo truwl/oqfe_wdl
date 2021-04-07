@@ -1,26 +1,24 @@
 version 1.0
 task oqfe{
     input {
+        String sample
         File forward_reads
         File? reverse_reads
-        String sample
         File? cram_reference_fasta
-        Int optical_duplicate_pixel_distance
-        Int threads
+        Int? optical_duplicate_pixel_distance
     }
 
     Int threads = 4
 
     command {
-        set -e -o pipefail
         /usr/bin/python3.6 \
         /oqfe \
+        ~{"--sample " + sample} \
         ~{"-j " + threads} \
-        ~{"-1" + forward_reads} \
-        ~{"-2" + reverse_reads} \
-        ~{"--sample" + sample} \
-        ~{"-r" + cram_reference_fasta} \
-        ~{"-d" + optical_duplicate_pixel_distance}
+        ~{"-1 " + forward_reads} \
+        ~{"-2 " + reverse_reads} \
+        ~{"-r " + cram_reference_fasta} \
+        ~{"-d " + optical_duplicate_pixel_distance}
     }
 
     output {

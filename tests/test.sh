@@ -1,1 +1,1 @@
-docker run -v /Users/leipzig/Documents/dev/oqfe/tests:/home dnanexus/oqfe -1 /home/NA12878.cram --sample NA12878
+miniwdl run oqfe.wdl sample=NA12878 forward_reads=https://storage.googleapis.com/truwl-sra/SRR7781428/NA12878-wu-r1-K5_lib63-d.UM.cram --verbose
