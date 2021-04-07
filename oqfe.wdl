@@ -1,5 +1,35 @@
 version 1.0
-task oqfe{
+
+workflow oqfewf{
+    input {
+        String sample
+        File forward_reads
+        File? reverse_reads
+        File? cram_reference_fasta
+        Int? optical_duplicate_pixel_distance
+    }
+
+    Int threads = 4
+
+    call oqfetask {
+        input:
+            sample = sample,
+            forward_reads = forward_reads,
+            reverse_reads = reverse_reads,
+            cram_reference_fasta = cram_reference_fasta,
+            optical_duplicate_pixel_distance = optical_duplicate_pixel_distance
+    }
+
+    output {
+        File outputCram = oqfetask.outputCram
+        File outputCramIndex = oqfetask.outputCramIndex
+        File markdupStats = oqfetask.markdupStats
+    }
+
+    meta {allowNestedInputs: true}
+}
+
+task oqfetask{
     input {
         String sample
         File forward_reads
@@ -31,6 +61,4 @@ task oqfe{
         docker: "dnanexus/oqfe:latest"
         cpu: threads
     }
-    
-    meta {allowNestedInputs: true}
 }
