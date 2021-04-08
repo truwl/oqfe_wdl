@@ -10,7 +10,7 @@ meta:
   cytoscapeStatus: Incomplete
   runit_filename: oqfe.wdl
   runit_pipeline_name: oqfe_wdl
-  runit_git_hash: v1.0
+  runit_git_hash: v1.0.10
   inputs_file: oqfe_inputs.json
   executable: true
   current: true
