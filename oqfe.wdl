@@ -60,7 +60,7 @@ task oqfetask{
     }
 
     runtime {
-        docker: "dnanexus/oqfe:latest"
+        docker: "truwl/oqfe:latest"
         disks: "local-disk 20 SSD"
         cpu: threads
     }
