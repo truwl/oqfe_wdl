@@ -7,6 +7,7 @@ workflow oqfe{
         File? reverse_reads
         File? cram_reference_fasta
         Int? optical_duplicate_pixel_distance
+        Boolean reuse_cram_header = false
     }
 
     call oqfetask {
@@ -15,7 +16,8 @@ workflow oqfe{
             forward_reads = forward_reads,
             reverse_reads = reverse_reads,
             cram_reference_fasta = cram_reference_fasta,
-            optical_duplicate_pixel_distance = optical_duplicate_pixel_distance
+            optical_duplicate_pixel_distance = optical_duplicate_pixel_distance,
+            reuse_cram_header = reuse_cram_header
     }
 
     output {
@@ -34,6 +36,7 @@ task oqfetask{
         File? reverse_reads
         File? cram_reference_fasta
         Int? optical_duplicate_pixel_distance
+        Boolean reuse_cram_header
     }
 
     Int threads = 4
@@ -46,7 +49,8 @@ task oqfetask{
         ~{"-1 " + forward_reads} \
         ~{"-2 " + reverse_reads} \
         ~{"-r " + cram_reference_fasta} \
-        ~{"-d " + optical_duplicate_pixel_distance}
+        ~{"-d " + optical_duplicate_pixel_distance} \
+        ~{true="-c" false="" reuse_cram_header}
     }
 
     output {

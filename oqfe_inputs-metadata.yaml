@@ -17,6 +17,9 @@ parameter_meta:
     oqfe.optical_duplicate_pixel_distance:
         description: optical duplicate pixel distance for "Picard MarkDuplicates" is a parameter default 2500
         group: Optional_Fields
+    oqfe.reuse_cram_header:
+        description: Reuse CRAM header for readgroup (RG) info?
+        group: Required_Fields
 parameter_group:
     Required_Fields:
         title: Required Fields
