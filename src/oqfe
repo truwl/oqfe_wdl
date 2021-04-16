@@ -288,8 +288,8 @@ def run_bwa(bwa_reference_index_path,
         read_group_library = flowcell_id
 
         # Now set the string to be used by bwa for setting read group information
-        read_group_string = ('\'@RG\\tID:{read_group_id}\\tPL:{read_group_platform}\\t' + \
-                             'PU:{read_group_pu}\\tSM:{sample}\\tLB:{read_group_library}\'')
+        read_group_string = ('@RG\\tID:{read_group_id}\\tPL:{read_group_platform}\\t' + \
+                             'PU:{read_group_pu}\\tSM:{sample}\\tLB:{read_group_library}')
         read_group_string = read_group_string.format(read_group_id=read_group_id,
                                                      read_group_platform=read_group_platform,
                                                      read_group_pu=read_group_pu,
