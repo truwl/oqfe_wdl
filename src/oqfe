@@ -270,7 +270,7 @@ def run_bwa(bwa_reference_index_path,
                 sequence_identifiers = f.readline().split(':')
         else:
             raise Exception('Unable to determine input filetype (".gz", ".fastq", or ".fq")')
-
+        #@ST-E00312:37:H77NJCCXX:1:1101:1538:29402
         flowcell_id = sequence_identifiers[2]
         flowcell_lane = sequence_identifiers[3]
 

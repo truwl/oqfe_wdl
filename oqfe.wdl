@@ -54,14 +54,15 @@ task oqfetask{
     }
 
     output {
-        File outputCram = sample + ".oqfe.cram"
-        File outputCramIndex = sample + ".oqfe.crai"
-        File markdupStats = sample + ".oqfe.markdup_stats.txt"
+        File outputCram = "output/" + sample + ".oqfe.cram"
+        File outputCramIndex = "output/" + sample + ".oqfe.crai"
+        File markdupStats = "output/" + sample + ".oqfe.markdup_stats.txt"
     }
 
     runtime {
         docker: "truwl/oqfe:latest"
         disks: "local-disk 20 SSD"
+        memory: 32 + "GB"
         cpu: threads
     }
 }
