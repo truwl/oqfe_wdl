@@ -3,27 +3,24 @@ workflow_description: This app processes whole genome sequencing (WGS) or whole 
 parameter_meta:
     oqfe.sample:
         description: The sample name
-        group: Required_Fields
+        group: Fields
     oqfe.cram_reference_fasta:
         description: Optional reference (GRCh38 built in)
-        group: Optional_Fields
+        group: Fields
     oqfe.forward_reads:
         description: Forward reads Fastq *.fastq.gz or *.fq.gz or a CRAM file *.cram. According to the FE protocol, the header line for the RG should contain minimally the tags ID, PL, PU, SM, and LB. Only if all of these tags are present in the input CRAM can they be used for the output OQFE CRAM header, otherwise the app will return an error and exit.
         example: gs://broad-public-datasets/NA12878/NA12878.cram
-        group: Required_Fields
+        group: Fields
     oqfe.reverse_reads:
         description: Reverse reads fastq (optional)
-        group: Optional_Fields
+        group: Fields
     oqfe.optical_duplicate_pixel_distance:
         description: optical duplicate pixel distance for "Picard MarkDuplicates" is a parameter default 2500
-        group: Optional_Fields
+        group: Fields
     oqfe.reuse_cram_header:
         description: Reuse CRAM header for readgroup (RG) info?
-        group: Required_Fields
+        group: Fields
 parameter_group:
-    Required_Fields:
-        title: Required Fields
-        description: Required Fields
-    Optional_Fields:
-        title: Optional Fields
-        description: Optional Fields
+    Fields:
+        title: OQFE Fields
+        description: OQFE Required and Optional Fields
